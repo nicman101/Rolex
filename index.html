@@ -72,8 +72,10 @@
 
   /* Cards */
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
-  .card { background: var(--bg-alt); border-radius: 28px; padding: 44px 36px 48px; text-align: center; transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s; }
+  .card { background: var(--bg-alt); border-radius: 28px; padding: 0 0 44px; overflow: hidden; text-align: center; transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s; }
   .card:hover { transform: scale(1.025); box-shadow: 0 20px 40px rgba(0,0,0,.08); }
+  .card img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; margin-bottom: 28px; }
+  .card .year, .card h3, .card p { padding: 0 32px; }
   .card .year { font-size: .8rem; font-weight: 600; color: #b8860b; letter-spacing: .06em; text-transform: uppercase; }
   .card h3 { font-size: 2rem; font-weight: 700; letter-spacing: -.02em; margin: 6px 0 12px; }
   .card p { color: var(--muted); font-size: 1.05rem; line-height: 1.4; }
@@ -102,7 +104,7 @@
     nav ul { gap: 16px; }
     section { padding: 70px 0; }
     .hero { padding: 70px 0 60px; }
-    .card { padding: 36px 24px; }
+    
   }
 </style>
 </head>
@@ -150,12 +152,12 @@
       <h2 class="reveal">Ikonerna.</h2>
       <p class="lead reveal">Några av de mest kända serierna genom tiderna.</p>
       <div class="grid">
-        <div class="card reveal"><div class="year">1945</div><h3>Datejust</h3><p>Den klassiska allroundklockan med datumfönster, i många storlekar och utföranden.</p></div>
-        <div class="card reveal"><div class="year">1953</div><h3>Submariner</h3><p>Dykarklockan som blev en ikon, med vridbar ram och hög vattentäthet.</p></div>
-        <div class="card reveal"><div class="year">1953</div><h3>Explorer</h3><p>Ett rent och robust äventyrsur med tydlig tavla, kopplat till bergsbestigning.</p></div>
-        <div class="card reveal"><div class="year">1954</div><h3>GMT-Master</h3><p>Skapad för piloter. Visar två tidszoner samtidigt.</p></div>
-        <div class="card reveal"><div class="year">1956</div><h3>Day-Date</h3><p>Visar både dag och datum i klartext. Tillverkas i ädelmetall.</p></div>
-        <div class="card reveal"><div class="year">1963</div><h3>Daytona</h3><p>Kronografen för racing och en av de mest eftertraktade modellerna.</p></div>
+        <div class="card reveal"><img src="images/datejust.jpg" alt="Rolex Datejust med guld och stål" loading="lazy"><div class="year">1945</div><h3>Datejust</h3><p>Den klassiska allroundklockan med datumfönster, i många storlekar och utföranden.</p></div>
+        <div class="card reveal"><img src="images/submariner.jpg" alt="Rolex Submariner med svart ram" loading="lazy"><div class="year">1953</div><h3>Submariner</h3><p>Dykarklockan som blev en ikon, med vridbar ram och hög vattentäthet.</p></div>
+        <div class="card reveal"><img src="images/explorer.jpg" alt="Rolex Explorer med svart tavla" loading="lazy"><div class="year">1953</div><h3>Explorer</h3><p>Ett rent och robust äventyrsur med tydlig tavla, kopplat till bergsbestigning.</p></div>
+        <div class="card reveal"><img src="images/gmt-master.jpg" alt="Rolex GMT-Master II med blå och svart ram" loading="lazy"><div class="year">1954</div><h3>GMT-Master</h3><p>Skapad för piloter. Visar två tidszoner samtidigt.</p></div>
+        <div class="card reveal"><img src="images/day-date.jpg" alt="Rolex Day-Date i guld med färgade tavlor" loading="lazy"><div class="year">1956</div><h3>Day-Date</h3><p>Visar både dag och datum i klartext. Tillverkas i ädelmetall.</p></div>
+        <div class="card reveal"><img src="images/daytona.jpg" alt="Rolex Daytona med vit tavla" loading="lazy"><div class="year">1963</div><h3>Daytona</h3><p>Kronografen för racing och en av de mest eftertraktade modellerna.</p></div>
       </div>
     </div>
   </section>
@@ -192,7 +194,9 @@
 <footer>
   <div class="wrap">
     Oberoende fansida. Inte ansluten till, godkänd av eller sponsrad av Rolex SA.
-    Rolex är ett registrerat varumärke som tillhör sin ägare.
+    Rolex är ett registrerat varumärke som tillhör sin ägare.<br>
+    Bilder från Wikimedia Commons: Datejust av anna2005 (CC0), Submariner av Dr.K. (CC BY-SA 3.0), Explorer av Thierry/Mostra-store (CC BY-SA 4.0),
+    GMT-Master av gabihil (public domain), Day-Date av Kevin Sweeney (CC0), Daytona av Clyde94 (CC BY-SA 4.0).
   </div>
 </footer>
 
